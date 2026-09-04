@@ -1,0 +1,180 @@
+# =========================================
+# TaheriShop.Api - .gitignore
+# .NET / ASP.NET Core / JetBrains Rider
+# =========================================
+
+# -----------------------------------------
+# Build output
+# -----------------------------------------
+[Bb]in/
+[Oo]bj/
+
+# Generated build artifacts
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# -----------------------------------------
+# Visual Studio / .NET
+# -----------------------------------------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache
+.vscode/
+
+# -----------------------------------------
+# JetBrains Rider / ReSharper
+# -----------------------------------------
+.idea/
+*.sln.iml
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper*
+*.DotSettings.user
+
+# -----------------------------------------
+# NuGet
+# -----------------------------------------
+*.nupkg
+*.snupkg
+
+# NuGet local cache / packages
+packages/
+.nuget/
+
+# NuGet generated files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# -----------------------------------------
+# ASP.NET Core / .NET local files
+# -----------------------------------------
+
+# User secrets
+secrets.json
+
+# Local development configuration
+appsettings.Development.local.json
+appsettings.Local.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# -----------------------------------------
+# Logs
+# -----------------------------------------
+*.log
+logs/
+Log/
+Logs/
+
+# -----------------------------------------
+# Database / Local development
+# -----------------------------------------
+
+# Local SQL Server / SQLite database files
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# -----------------------------------------
+# OS generated files
+# -----------------------------------------
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# -----------------------------------------
+# Temporary files
+# -----------------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# -----------------------------------------
+# Code coverage
+# -----------------------------------------
+coverage/
+.coverage/
+coverage*.json
+
+# -----------------------------------------
+# Publish output
+# -----------------------------------------
+publish/
+Publish/
+*.publishsettings
+
+# -----------------------------------------
+# Docker local overrides
+# -----------------------------------------
+docker-compose.override.yml
+
+# -----------------------------------------
+# Azure / deployment local files
+# -----------------------------------------
+*.pubxml
+*.publishproj
+
+# -----------------------------------------
+# Certificates / private keys
+# -----------------------------------------
+*.pfx
+*.p12
+*.key
+*.pem
+
+# -----------------------------------------
+# Local configuration / secrets
+# -----------------------------------------
+
+# Local-only configuration files
+appsettings.*.local.json
+
+# Keep example configuration files
+!appsettings.example.json
+!appsettings.Development.example.json
+
+# -----------------------------------------
+# Node (if tooling is added later)
+# -----------------------------------------
+node_modules/
+
+# -----------------------------------------
+# Miscellaneous
+# -----------------------------------------
+*.orig
+*.rej

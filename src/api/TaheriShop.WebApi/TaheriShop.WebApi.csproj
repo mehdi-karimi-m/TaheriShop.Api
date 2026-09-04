@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\application\TaheriShop.Application.Contract\TaheriShop.Application.Contract.csproj" />
+      <ProjectReference Include="..\..\application\TaheriShop.Application\TaheriShop.Application.csproj" />
+      <ProjectReference Include="..\..\domain\TaheriShop.Domain.Contract\TaheriShop.Domain.Contract.csproj" />
+      <ProjectReference Include="..\..\domain\TaheriShop.Domain\TaheriShop.Domain.csproj" />
+      <ProjectReference Include="..\..\infrastructure\TaheriShop.Persistence.EF\TaheriShop.Persistence.EF.csproj" />
+    </ItemGroup>
+
+</Project>

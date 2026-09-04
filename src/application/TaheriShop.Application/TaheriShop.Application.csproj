@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\00-framework\TaheriShop.Framework.Core\TaheriShop.Framework.Core.csproj" />
+      <ProjectReference Include="..\..\domain\TaheriShop.Domain.Contract\TaheriShop.Domain.Contract.csproj" />
+      <ProjectReference Include="..\..\domain\TaheriShop.Domain\TaheriShop.Domain.csproj" />
+      <ProjectReference Include="..\TaheriShop.Application.Contract\TaheriShop.Application.Contract.csproj" />
+    </ItemGroup>
+
+</Project>
