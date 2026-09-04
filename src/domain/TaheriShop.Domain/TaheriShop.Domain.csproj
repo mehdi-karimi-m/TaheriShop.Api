@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\00-framework\TaheriShop.Framework.Core.Abstractions\TaheriShop.Framework.Core.Abstractions.csproj" />
+      <ProjectReference Include="..\..\00-framework\TaheriShop.Framework.Domain\TaheriShop.Framework.Domain.csproj" />
       <ProjectReference Include="..\TaheriShop.Domain.Contract\TaheriShop.Domain.Contract.csproj" />
     </ItemGroup>
 

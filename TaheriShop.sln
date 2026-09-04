@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaheriShop.Framework.Core.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaheriShop.Framework.Core", "src\00-framework\TaheriShop.Framework.Core\TaheriShop.Framework.Core.csproj", "{53E36A86-A0D9-42DE-BDC7-5329BB97D320}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaheriShop.Framework.Domain", "src\00-framework\TaheriShop.Framework.Domain\TaheriShop.Framework.Domain.csproj", "{6509E2C7-A486-4308-9BD8-62BE085460D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{53E36A86-A0D9-42DE-BDC7-5329BB97D320}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53E36A86-A0D9-42DE-BDC7-5329BB97D320}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53E36A86-A0D9-42DE-BDC7-5329BB97D320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6509E2C7-A486-4308-9BD8-62BE085460D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6509E2C7-A486-4308-9BD8-62BE085460D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6509E2C7-A486-4308-9BD8-62BE085460D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6509E2C7-A486-4308-9BD8-62BE085460D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DF4F8BBB-FBE2-420B-BA8B-CAAC9B4D6A0F} = {E4E814E8-80DE-4842-B344-8A8375D21C51}
@@ -101,5 +107,6 @@ Global
 		{AA414BA5-E28E-435F-BE2E-862FB9587225} = {E4E814E8-80DE-4842-B344-8A8375D21C51}
 		{5C3599D1-6BDE-4B79-94DA-BD2D3D94860D} = {AA414BA5-E28E-435F-BE2E-862FB9587225}
 		{53E36A86-A0D9-42DE-BDC7-5329BB97D320} = {AA414BA5-E28E-435F-BE2E-862FB9587225}
+		{6509E2C7-A486-4308-9BD8-62BE085460D9} = {AA414BA5-E28E-435F-BE2E-862FB9587225}
 	EndGlobalSection
 EndGlobal
