@@ -1,5 +1,6 @@
 using FluentAssertions;
 using TaheriShop.Domain.UnitTests.Builders;
+using TaheriShop.Domain.UnitTests.Helpers;
 
 namespace TaheriShop.Domain.UnitTests;
 
@@ -8,8 +9,8 @@ public class AccountTests
     [Fact]
     public void Create_account()
     {
-        var accountId = 1;
-        var customerId = 1;
+        var accountId = TestHelper.CreateRandomAccountId();
+        var customerId = TestHelper.CreateRandomCustomerId();
 
         var account = new AccountBuilder()
             .WithId(accountId)
