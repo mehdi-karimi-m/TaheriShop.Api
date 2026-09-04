@@ -1,4 +1,5 @@
 using TaheriShop.Framework.Domain.Common;
+using TaheriShop.Domain.Events;
 
 namespace TaheriShop.Domain;
 
@@ -11,5 +12,6 @@ public class Account : AggregateRoot<long>
         : base(accountId)
     {
         CustomerId = customerId;
+        AddDomainEvent(new AccountCreated(Id, CustomerId));
     }
 }

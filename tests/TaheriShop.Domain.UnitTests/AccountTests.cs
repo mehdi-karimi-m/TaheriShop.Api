@@ -1,4 +1,5 @@
 using FluentAssertions;
+using TaheriShop.Domain.Events;
 using TaheriShop.Domain.UnitTests.Builders;
 using TaheriShop.Domain.UnitTests.Helpers;
 
@@ -9,8 +10,8 @@ public class AccountTests
     [Fact]
     public void Create_account()
     {
-        var accountId = TestHelper.CreateRandomAccountId();
-        var customerId = TestHelper.CreateRandomCustomerId();
+        var accountId = TestHelper.GetSomeAccountId();
+        var customerId = TestHelper.GetSomeCustomerId();
 
         var account = new AccountBuilder()
             .WithId(accountId)
@@ -21,5 +22,7 @@ public class AccountTests
         account.Id.Should().Be(accountId);
         account.CustomerId.Should().Be(customerId);
         account.Balance.Should().Be(0);
+        account.DomainEvents.Should().ContainSingle()
+            .Which.Should().BeOfType<AccountCreated>();
     }
 }
