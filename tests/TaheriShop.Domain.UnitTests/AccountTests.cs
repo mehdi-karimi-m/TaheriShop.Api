@@ -1,5 +1,5 @@
 using FluentAssertions;
-using TaheriShop.Domain.Events;
+using TaheriShop.Domain.Contract.Events;
 using TaheriShop.Domain.UnitTests.Builders;
 using TaheriShop.Domain.UnitTests.Helpers;
 

@@ -1,5 +1,5 @@
 using TaheriShop.Framework.Domain.Common;
-using TaheriShop.Domain.Events;
+using TaheriShop.Domain.Contract.Events;
 
 namespace TaheriShop.Domain;
 

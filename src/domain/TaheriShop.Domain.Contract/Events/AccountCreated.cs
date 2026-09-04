@@ -1,6 +1,6 @@
 using TaheriShop.Framework.Domain.Events;
 
-namespace TaheriShop.Domain.Events;
+namespace TaheriShop.Domain.Contract.Events;
 
 public sealed record AccountCreated(long AccountId, long CustomerId) : IDomainEvent
 {

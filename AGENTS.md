@@ -6,11 +6,13 @@
 
 - `src/api/TaheriShop.WebApi` is the HTTP entry point and composition root.
 - `src/application` contains application services and public contracts.
-- `src/domain` contains business rules and domain-facing contracts.
+- `src/domain/TaheriShop.Domain.Contract` contains domain-facing contracts and event types.
+- `src/domain/TaheriShop.Domain` contains business rules and aggregate implementations.
 - `src/infrastructure/TaheriShop.Persistence.EF` is reserved for Entity Framework persistence.
 - `src/00-framework/TaheriShop.Framework.Domain` contains reusable DDD building blocks:
   entities, aggregate roots, value objects, event contracts, and rule exceptions.
-- `src/domain/TaheriShop.Domain` contains aggregates and events; `Account` raises `AccountCreated`.
+- `src/domain/TaheriShop.Domain` contains aggregates; `Account` raises the
+  `TaheriShop.Domain.Contract.Events.AccountCreated` event.
 - `tests/TaheriShop.Domain.UnitTests` contains xUnit tests, `Builders/AccountBuilder.cs`
   test-object builders, and `Helpers/TestHelper.cs` random test data helpers.
 
@@ -21,7 +23,7 @@ Keep dependencies directed inward: API and infrastructure may depend on applicat
 Use framework domain primitives instead of reimplementing identity or event behavior.
 Aggregate roots inherit `AggregateRoot<TKey>` and expose state through controlled methods.
 Domain events implement `IDomainEvent` (`EventId` and `OccurredOn`) and are added through the
-aggregate root. Keep event types beside their aggregate under `src/domain/.../Events`.
+aggregate root. Keep published event types in `TaheriShop.Domain.Contract/Events`.
 Represent invariants with `IBusinessRule` implementations and framework rule helpers.
 
 ## Build, Test, and Development Commands

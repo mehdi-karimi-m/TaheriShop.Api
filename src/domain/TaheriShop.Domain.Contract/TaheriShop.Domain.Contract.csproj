@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\..\00-framework\TaheriShop.Framework.Domain\TaheriShop.Framework.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
