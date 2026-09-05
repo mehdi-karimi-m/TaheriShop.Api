@@ -17,4 +17,7 @@ public static class TestHelper
 
     public static decimal GetSomeAccountBalance() =>
         Random.Shared.Next(0, MaximumBalanceInCents) / 100m;
+
+    public static decimal GetSomeAmountThatIsEqualOrLessThanZero() =>
+        Random.Shared.Next(-MaximumBalanceInCents, 1) / 100m;
 }

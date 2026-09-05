@@ -1,7 +1,3 @@
-using System.Runtime.CompilerServices;
-using TaheriShop.Framework.Domain.Exceptions;
-using TaheriShop.Framework.Domain.Rules;
-
 namespace TaheriShop.Framework.Domain.Common;
 
 public abstract class Entity<TKey> : IEntity<TKey>, IEquatable<Entity<TKey>>
@@ -20,21 +16,6 @@ public abstract class Entity<TKey> : IEntity<TKey>, IEquatable<Entity<TKey>>
 
     public TKey Id { get; protected set; }
 
-    public bool IsTransient()
-    {
-        return EqualityComparer<TKey>.Default.Equals(Id, default);
-    }
-
-    protected static void CheckRule(IBusinessRule rule)
-    {
-        ArgumentNullException.ThrowIfNull(rule);
-
-        if (rule.IsBroken())
-        {
-            throw new BusinessRuleValidationException(rule);
-        }
-    }
-
     public bool Equals(Entity<TKey>? other)
     {
         if (ReferenceEquals(this, other))
@@ -43,11 +24,6 @@ public abstract class Entity<TKey> : IEntity<TKey>, IEquatable<Entity<TKey>>
         }
 
         if (other is null || GetType() != other.GetType())
-        {
-            return false;
-        }
-
-        if (IsTransient() || other.IsTransient())
         {
             return false;
         }
@@ -62,9 +38,7 @@ public abstract class Entity<TKey> : IEntity<TKey>, IEquatable<Entity<TKey>>
 
     public override int GetHashCode()
     {
-        return IsTransient()
-            ? RuntimeHelpers.GetHashCode(this)
-            : HashCode.Combine(GetType(), Id);
+        return HashCode.Combine(GetType(), Id);
     }
 
     public static bool operator ==(Entity<TKey>? left, Entity<TKey>? right)

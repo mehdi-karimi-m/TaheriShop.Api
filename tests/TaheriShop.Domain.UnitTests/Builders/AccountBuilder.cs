@@ -1,11 +1,29 @@
-using TaheriShop.Domain;
+using TaheriShop.Domain.UnitTests.Helpers;
 
 namespace TaheriShop.Domain.UnitTests.Builders;
 
 public class AccountBuilder
 {
-    private int _accountId = 1;
-    private int _customerId = 1;
+    private int _accountId;
+    private int _customerId;
+    private decimal _balance;
+
+    private AccountBuilder()
+    {
+        _accountId = TestHelper.GetSomeAccountId();
+        _customerId = TestHelper.GetSomeCustomerId();
+        _balance = decimal.Zero;
+    }
+
+    public static AccountBuilder Create()
+    {
+        return new AccountBuilder();
+    }
+
+    public Account Build()
+    {
+        return new Account(_accountId, _customerId, _balance);
+    }
 
     public AccountBuilder WithId(int accountId)
     {
@@ -19,8 +37,9 @@ public class AccountBuilder
         return this;
     }
 
-    public Account Build()
+    public AccountBuilder WithBalance(decimal balance)
     {
-        return new Account(_accountId, _customerId);
+        _balance = balance;
+        return this;
     }
 }
